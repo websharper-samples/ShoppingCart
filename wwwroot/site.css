@@ -1,0 +1,138 @@
+#main
+{
+    width: 600px;
+    min-height: 500px;
+    height: 500px;
+    vertical-align: top;
+    padding: 10px;
+}
+#menu
+{
+    background-color: Gray;
+    color: White;
+    padding: 10px;
+}
+#menu a
+{
+    color: White;
+}
+#side
+{
+    background-color: #eee;
+    width: 300px;
+    min-height: 500px;
+    height: 500px;
+    vertical-align: top;
+    padding: 10px;
+}
+#banner
+{
+    background-color: #5480D9;
+    vertical-align: middle;
+    text-align: center;
+    color: White;
+    height: 100px;
+}
+#banner h1
+{
+    font-size: 36px;
+}
+#footer
+{
+    background-color: Gray;
+    height: 50px;
+    color: White;
+}
+/* ------------General------------ */
+h1
+{
+    font-size: 18px;
+}
+h2
+{
+    font-size: 16px;
+}
+h3
+{
+    font-size: 14px;
+}
+/* ----------Shopping cart------------ */
+#shopping-cart
+{
+}
+    /* ----------Product families------------ */
+    #shopping-cart div.family
+    {
+        width: 100%;
+        margin: auto;
+        clear: both;
+        display: block;
+        margin-bottom: 20px;
+    }
+    #shopping-cart div.family h1
+    {
+        border-bottom: 1px solid Gray;
+    }
+    #shopping-cart div.family div.product
+    {
+        background-color: White;
+        padding-bottom: 20px;
+        height: 150px;
+        width: 280px;
+        float: left;
+    }
+    #shopping-cart div.family div.product h1
+    {
+        border: 0px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #shopping-cart div.family div.product code
+    {
+        font-family: Arial;
+        font-size: 18px;
+        color: Red;
+        font-weight: bold;
+    }
+    #shopping-cart div.family div.product input[type="text"]
+    {
+        width: 40px;
+    }
+    #shopping-cart div.family div.product img
+    {
+        float: left;
+        padding: 10px;
+    }
+/* ----------Shopping cart contents------------ */
+#shopping-cart-contents
+{
+}
+    /* ----------Items------------ */
+    #shopping-cart-contents table
+    {
+        width: 100%;
+    }
+    #shopping-cart-contents table tbody tr td.col1
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 10px;
+        vertical-align: baseline;
+    }
+    #shopping-cart-contents table tbody tr td.col2
+    {
+        width: 15%;
+        text-align: right;
+        padding-right: 20px;
+    }
+    #shopping-cart-contents table tbody tr td.col1 div.count, #shopping-cart-contents table tbody tr td.col1 div.title, #shopping-cart-contents table tbody tr td.col1 input[type="button"]
+    {
+        float: left;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+    #shopping-cart-contents table tbody tr.alt
+    {
+        background-color: White;
+    }

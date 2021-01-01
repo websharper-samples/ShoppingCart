@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="site.css" rel="stylesheet" type="text/css" />
+    <title>My Store</title>
+    <style>
+        /* Don't show the not-yet-loaded templates */
+        [ws-template], [ws-children-template] { display: none; }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2" id="banner">
+                    <h1>${Title}</h1>
+                </td>
+            </tr>
+            <tr>
+                <td id="main">
+                    <div ws-replace="Main">
+                        <div ws-children-template="ItemsToSell">
+                            <div id="shopping-cart">
+                                <div ws-replace="Families">
+                                    <div ws-children-template="Family">
+                                        <div class="family">
+                                            <h1>${Title}</h1>
+                                            <div ws-replace="Products">
+                                                <div ws-children-template="Product">
+                                                    <div class="product">
+                                                        <img alt="${Title}" src="${ImageSrc}" />
+                                                        <div>
+                                                            <h1>${Title}</h1>
+                                                            <p>
+                                                                <code>$${Price} / item</code>
+                                                            </p>
+                                                            <input type="text" value="1" ws-var="Quantity" />
+                                                            <button ws-onclick="AddToCart">Add to cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product">
+                                                    <img alt="HP" src="images/laptop.png" />
+                                                    <div>
+                                                        <h1>HP</h1>
+                                                        <p>
+                                                            <code>$1499 / item</code>
+                                                        </p>
+                                                        <input type="text" value="1" />
+                                                        <button>Add to cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="product">
+                                                    <img alt="Dell" src="images/laptop.png" />
+                                                    <div>
+                                                        <h1>Dell</h1>
+                                                        <p>
+                                                            <code>$1499 / item</code>
+                                                        </p>
+                                                        <input type="text" value="1" />
+                                                        <button>Add to cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="product">
+                                                    <img alt="Acer" src="images/laptop.png" />
+                                                    <div>
+                                                        <h1>Acer</h1>
+                                                        <p>
+                                                            <code>$1499 / item</code>
+                                                        </p>
+                                                        <input type="text" value="1" />
+                                                        <button>Add to cart</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="family">
+                                        <h1>Desktops</h1>
+                                        <div class="product">
+                                            <img alt="Gamer 1" src="images/desktop.png" />
+                                            <div>
+                                                <h1>Gamer 1</h1>
+                                                <p>
+                                                    <code>$699 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Gamer 2" src="images/desktop.png" />
+                                            <div>
+                                                <h1>Gamer 2</h1>
+                                                <p>
+                                                    <code>$799 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Office" src="images/desktop.png" />
+                                            <div>
+                                                <h1>Office</h1>
+                                                <p>
+                                                    <code>$599 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Server" src="images/desktop.png" />
+                                            <div>
+                                                <h1>Server</h1>
+                                                <p>
+                                                    <code>$1299 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="family">
+                                        <h1>Netbooks</h1>
+                                        <div class="product">
+                                            <img alt="Entry" src="images/netbook.png" />
+                                            <div>
+                                                <h1>Entry</h1>
+                                                <p>
+                                                    <code>$799 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Medium" src="images/netbook.png" />
+                                            <div>
+                                                <h1>Medium</h1>
+                                                <p>
+                                                    <code>$899 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Cool" src="images/netbook.png" />
+                                            <div>
+                                                <h1>Cool</h1>
+                                                <p>
+                                                    <code>$699 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img alt="Speed-King" src="images/netbook.png" />
+                                            <div>
+                                                <h1>Speed-King</h1>
+                                                <p>
+                                                    <code>$999 / item</code>
+                                                </p>
+                                                <input type="text" value="1" />
+                                                <button>Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td id="side">
+                    <div ws-replace="Sidebar">
+                        <div ws-children-template="ShoppingCart">
+                            <div id="shopping-cart-contents">
+                                <h1>Shopping Cart</h1>
+                                <div>
+                                    <div>
+                                        <div ws-replace="CartItems">
+                                            <div ws-children-template="CartItem">
+                                                <div>
+                                                    <div>
+                                                        <button ws-onclick="Decrement">-</button>
+                                                        <span class="count">${Quantity}</span>
+                                                        <button ws-onclick="Increment">+</button>
+                                                        <button ws-onclick="Remove">X</button>
+                                                        <span class="title">${Name}</span>
+                                                    </div>
+                                                    <div>
+                                                        <code>$${Amount}</code>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div>
+                                            <div>
+                                                Total
+                                            </div>
+                                            <div>
+                                                <code style="font-weight:bold;">$${TotalAmount}</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="height:20px"></div>
+                                <div>
+                                    <button ws-onclick="Checkout">Checkout</button>
+                                    <button ws-onclick="EmptyCart">Empty cart</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="footer">
+                    <div ws-replace="Footer"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript" src="Content/MyShoppingCart.min.js"></script>
+</body>
+</html>
