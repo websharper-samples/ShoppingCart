@@ -44,9 +44,9 @@ module Client =
     // The store is static data, so it lives on the client and the sample stays
     // a pure single-page app (no server round-trip, easy to host on gh-pages).
     let private store : ProductFamily list =
-        let laptop = makeItem "/images/laptop.png"
-        let desktop = makeItem "/images/desktop.png"
-        let netbook = makeItem "/images/netbook.png"
+        let laptop = makeItem "images/laptop.png"
+        let desktop = makeItem "images/desktop.png"
+        let netbook = makeItem "images/netbook.png"
         [
             {
                 Title = "Laptops"
