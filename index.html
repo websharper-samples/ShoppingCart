@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shop</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        /* Don't show the not-yet-loaded templates */
+        [ws-template], [ws-children-template] { display: none; }
+    </style>
+    <script type="text/javascript" src="Scripts/ShoppingCart.head.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>${Title}</h1>
+            <p>A WebSharper.UI shopping cart — with <a href="https://websharper.com">WebSharper</a></p>
+        </div>
+        <a class="source" href="https://github.com/websharper-samples/ShoppingCart">Source</a>
+    </header>
+
+    <main class="layout">
+        <section class="catalog">
+            <div ws-replace="Main">
+                <div ws-children-template="ItemsToSell">
+                    <div ws-replace="Families">
+                        <div ws-children-template="Family">
+                            <section class="family">
+                                <h2>${Title}</h2>
+                                <div class="products">
+                                    <div ws-replace="Products">
+                                        <div ws-children-template="Product">
+                                            <article class="product">
+                                                <img alt="${Title}" ws-attr="Src" />
+                                                <div class="product-body">
+                                                    <h3>${Title}</h3>
+                                                    <p class="price">${Price}</p>
+                                                    <div class="add">
+                                                        <input type="text" value="1" ws-var="Quantity" />
+                                                        <button ws-onclick="AddToCart">Add to cart</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart">
+            <div ws-replace="Sidebar">
+                <div ws-children-template="ShoppingCart">
+                    <h2>Shopping Cart</h2>
+                    <div class="cart-items">
+                        <div ws-replace="CartItems">
+                            <div ws-children-template="CartItem">
+                                <div class="cart-item">
+                                    <div class="cart-item-row">
+                                        <span class="title">${Name}</span>
+                                        <span class="qty">
+                                            <button class="step" ws-onclick="Decrement">−</button>
+                                            <span class="count">${Quantity}</span>
+                                            <button class="step" ws-onclick="Increment">+</button>
+                                        </span>
+                                        <button class="remove" ws-onclick="Remove">✕</button>
+                                    </div>
+                                    <code class="amount">${Amount}</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total</span>
+                        <code>${TotalAmount}</code>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="primary" ws-onclick="Checkout">Checkout</button>
+                        <button ws-onclick="EmptyCart">Empty cart</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div ws-replace="Footer"></div>
+    </footer>
+
+    <script type="module" src="Scripts/ShoppingCart.min.js"></script>
+</body>
+</html>
